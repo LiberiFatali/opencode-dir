@@ -1,5 +1,5 @@
-import { Database } from "./db";
-import { reportError } from "./lib";
+import { Database } from "./db.js";
+import { reportError } from "./lib.js";
 
 export type DriftReport = { ok: boolean; missing: string[] };
 

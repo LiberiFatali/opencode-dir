@@ -2,8 +2,8 @@ import { existsSync, statSync, mkdirSync, rmSync, readdirSync, readFileSync, wri
 import { join, resolve, dirname } from "path"
 import { tmpdir } from "os"
 import { createCipheriv, createDecipheriv, randomBytes, createHash } from "crypto"
-import { Database } from "./db"
-import { appendDirPermission, removeDirPermission } from "./lib"
+import { Database } from "./db.js"
+import { appendDirPermission, removeDirPermission } from "./lib.js"
 
 function keychainGet(key: string): string | null {
   try {

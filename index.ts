@@ -25,9 +25,9 @@ import {
   getSessionPermissions,
   getSessionInfo,
   getDbPath,
-} from "./lib";
-import { vaultInit, vaultOpen, vaultClose } from "./lib.vault";
-import { Database } from "./db";
+} from "./lib.js";
+import { vaultInit, vaultOpen, vaultClose } from "./lib.vault.js";
+import { Database } from "./db.js";
 
 const home = process.env.HOME || process.env.USERPROFILE || homedir();
 const STATE_DIR = `${process.env.XDG_DATA_HOME || home + "/.local/share"}/opencode`;

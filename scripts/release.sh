@@ -17,7 +17,7 @@ fi
 echo "Running typecheck..."
 npx tsc --noEmit || { echo "❌ Typecheck failed — aborting release"; exit 1; }
 echo "Running tests..."
-npx vitest run lib.test.ts lib.version.test.ts || { echo "❌ Tests failed — aborting release"; exit 1; }
+npx vitest run lib.test.ts lib.version.test.ts lib.packaging.test.ts || { echo "❌ Tests failed — aborting release"; exit 1; }
 echo "✅ All checks passed"
 
 # Read current version
